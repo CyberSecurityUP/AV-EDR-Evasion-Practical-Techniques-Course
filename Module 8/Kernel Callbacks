@@ -1,0 +1,14 @@
+// ⚠️ Requires a driver to enumerate kernel callbacks.
+// Instructor: Joas A Santos
+
+/*
+NOTE: This technique involves reading kernel memory (e.g., PsSetCreateProcessNotifyRoutine array).
+You must use a driver like "KDMapper" with a vulnerable driver like RTCore64 to access kernel space.
+
+Summary steps:
+1. Map vulnerable driver (BYOVD).
+2. Read memory at PsSetCreateProcessNotifyRoutine address.
+3. Analyze callbacks for EDRs.
+
+To avoid legal/OS crash risks, this part will be provided as a PoC driver separately if desejado.
+*/
